@@ -1,128 +1,271 @@
-body{
-    background-image: url('../images/background.png');
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: bottom;
-    background-size: 100%;
-    overflow: hidden;
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("../images/background.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: bottom;
+  background-size: 100%;
+  overflow: hidden;
 }
 
-img{
-    width : 150px;
-    position: absolute;
-    bottom: 0;
+#circle{
+    position:absolute;
+    transform:translate(-50%,-50%);
+    height:35px;
+    width:35px;
+    border-radius:50%;
+    border:2px solid rgb(32, 3, 15);
+  }
+
+img {
+  width: 150px;
+  position: absolute;
+  bottom: 0;
+}
+html{
+    cursor: crosshair;
 }
 
-#score{
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    color: white;
-    font-size: 40px;
+#score, #bullets,#lifeline {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  color: white;
+  font-size: 40px;
+}
+#bullets{
+    left : 20px;
+}
+#lifeline{
+    top: 20px;
+    font-size: 30px;
+    text-align: center;
+    color: black;
+    font-weight: 600;
+}
+#b1 {
+  left: 10%;
+  animation-name: bird1;
+  animation-duration: 12s;
+}
+#b2 {
+  left: 30%;
+  animation-name: bird2;
+  animation-duration: 12s;
+}
+#b3 {
+  right: 10%;
+  animation-name: bird3;
+  animation-duration: 12s;
+}
+#b4 {
+  right: 30%;
+  animation-name: bird4;
+  animation-duration: 12s;
 }
 
-#b1{
-    left:10%;
-    animation-name: bird1;
-    animation-duration: 8s;
+#b5 {
+  left: 20%;
+  animation-name: bird5;
+  animation-duration: 12s;
 }
-#b2{
-    left:30%;
-    animation-name: bird2;
-    animation-duration: 8s;
+#b6 {
+  left: 45%;
+  animation-name: bird6;
+  animation-duration: 12s;
 }
-#b3{
-    right:10%;
-    animation-name: bird3;
-    animation-duration: 8s;
+#b7 {
+  right: 20%;
+  animation-name: bird7;
+  animation-duration: 12s;
 }
-#b4{
-    right:30%;
-    animation-name: bird4;
-    animation-duration: 6s;
-}
-
-#b5{
-    left:20%;
-    animation-name: bird5;
-    animation-duration: 8s;
-}
-#b6{
-    left:45%;
-    animation-name: bird6;
-    animation-duration: 6s;
-}
-#b7{
-    right:20%;
-    animation-name: bird7;
-    animation-duration: 8s;
-}
-#b8{
-    right:1%;
-    animation-name: bird8;
-    animation-duration: 6s;
+#b8 {
+  right: 1%;
+  animation-name: bird8;
+  animation-duration: 12s;
 }
 
-@keyframes bird1{
-    10% {left: 10%; bottom: 30%}
-    30% {left: 30%; bottom: 50%}
-    50% {left: 40%; bottom: 70%}
-    70% {left: 60%; bottom: 30%}
-    100% {left: 100%; bottom: 50%}
+@keyframes bird1 {
+  10% {
+    left: 10%;
+    bottom: 30%;
+  }
+  30% {
+    left: 30%;
+    bottom: 50%;
+  }
+  50% {
+    left: 40%;
+    bottom: 70%;
+  }
+  70% {
+    left: 60%;
+    bottom: 30%;
+  }
+  100% {
+    left: 100%;
+    bottom: 50%;
+  }
 }
 
-@keyframes bird2{
-    30% {left: 30%; bottom: 10%}
-    30% {left: 20%; bottom: 30%}
-    50% {left: 50%; bottom: 50%}
-    70% {left: 80%; bottom: 70%}
-    100% {left: 100%; bottom: 70%}
+@keyframes bird2 {
+  30% {
+    left: 30%;
+    bottom: 10%;
+  }
+  30% {
+    left: 40%;
+    bottom: 30%;
+  }
+  50% {
+    left: 50%;
+    bottom: 50%;
+  }
+  70% {
+    left: 80%;
+    bottom: 70%;
+  }
+  100% {
+    left: 100%;
+    bottom: 70%;
+  }
 }
 
-@keyframes bird3{
-    10% {right: 10%; bottom: 10%}
-    30% {right: 20%; bottom: 30%}
-    50% {right: 50%; bottom: 50%}
-    70% {right: 80%; bottom: 70%}
-    100% {right: 100%; bottom: 70%}
+@keyframes bird3 {
+  10% {
+    right: 10%;
+    bottom: 10%;
+  }
+  30% {
+    right: 20%;
+    bottom: 30%;
+  }
+  50% {
+    right: 50%;
+    bottom: 50%;
+  }
+  70% {
+    right: 80%;
+    bottom: 70%;
+  }
+  100% {
+    right: 100%;
+    bottom: 70%;
+  }
 }
 
-@keyframes bird4{
-    0% {right: 30%; bottom: 0%}
-    30% {right: 20%; bottom: 10%}
-    50% {right: 50%; bottom: 35%}
-    70% {right: 80%; bottom: 65%}
-    100% {right: 100%; bottom: 100%}
+@keyframes bird4 {
+  0% {
+    right: 30%;
+    bottom: 0%;
+  }
+  30% {
+    right: 20%;
+    bottom: 10%;
+  }
+  50% {
+    right: 50%;
+    bottom: 35%;
+  }
+  70% {
+    right: 80%;
+    bottom: 65%;
+  }
+  100% {
+    right: 100%;
+    bottom: 100%;
+  }
 }
 
-@keyframes bird5{
-    10% {left: 20%; bottom: 0%}
-    30% {left: 34%; bottom: 20%}
-    50% {left: 51%; bottom: 45%}
-    70% {left: 68%; bottom: 70%}
-    100% {left: 100%; bottom: 50%}
+@keyframes bird5 {
+  10% {
+    left: 20%;
+    bottom: 0%;
+  }
+  30% {
+    left: 34%;
+    bottom: 20%;
+  }
+  50% {
+    left: 51%;
+    bottom: 45%;
+  }
+  70% {
+    left: 68%;
+    bottom: 70%;
+  }
+  100% {
+    left: 100%;
+    bottom: 50%;
+  }
 }
 
-@keyframes bird6{
-    10% {left: 45%; bottom: 0%}
-    30% {left: 62%; bottom: 10%}
-    50% {left: 72%; bottom: 35%}
-    70% {left: 85%; bottom: 55%}
-    100% {left: 100%; bottom: 70%}
+@keyframes bird6 {
+  10% {
+    left: 45%;
+    bottom: 0%;
+  }
+  30% {
+    left: 62%;
+    bottom: 10%;
+  }
+  50% {
+    left: 72%;
+    bottom: 35%;
+  }
+  70% {
+    left: 85%;
+    bottom: 55%;
+  }
+  100% {
+    left: 100%;
+    bottom: 70%;
+  }
 }
 
-@keyframes bird7{
-    0% {right: 20%; bottom: 0%}
-    30% {right: 27%; bottom: 13%}
-    50% {right: 54%; bottom: 39%}
-    70% {right: 81%; bottom: 52%}
-    100% {right: 100%; bottom: 60%}
+@keyframes bird7 {
+  0% {
+    right: 20%;
+    bottom: 0%;
+  }
+  30% {
+    right: 27%;
+    bottom: 13%;
+  }
+  50% {
+    right: 54%;
+    bottom: 39%;
+  }
+  70% {
+    right: 81%;
+    bottom: 52%;
+  }
+  100% {
+    right: 100%;
+    bottom: 60%;
+  }
 }
 
-@keyframes bird8{
-    0% {right: 1%; bottom: 0%}
-    30% {right: 18%; bottom: 5%}
-    50% {right: 32%; bottom: 15%}
-    70% {right: 56%; bottom: 35%}
-    100% {right: 100%; bottom: 47%}
+@keyframes bird8 {
+  0% {
+    right: 1%;
+    bottom: 0%;
+  }
+  30% {
+    right: 18%;
+    bottom: 5%;
+  }
+  50% {
+    right: 32%;
+    bottom: 15%;
+  }
+  70% {
+    right: 56%;
+    bottom: 35%;
+  }
+  100% {
+    right: 100%;
+    bottom: 47%;
+  }
 }

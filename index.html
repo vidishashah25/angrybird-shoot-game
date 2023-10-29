@@ -7,6 +7,7 @@
     <script src="./js/main.js"></script>
 </head>
 <body>
+    
     <img id ="b1" onClick="angryBirdShoot(this)" src="./images/bird1.gif">
     <img id ="b2" onClick="angryBirdShoot(this)" src="./images/bird1.gif">
     <img id ="b3" onClick="angryBirdShoot(this)" style="transform: scaleX(-1);" src="./images/bird1.gif">
@@ -16,5 +17,11 @@
     <img id ="b7" onClick="bombShoot(this)" style="transform: scaleX(-1);" src="./images/bomb1.gif">
     <img id ="b8" onClick="bombShoot(this)" style="transform: scaleX(-1);" src="./images/bomb1.gif"> 
     <div id="score">Score : <span id="currentScore">0</span></div>
+    <div id="bullets">Bullets : <span id="currentBullet">5</span></div>
+    <div id="lifeline">Lifeline : <span id="currentlifeLine">1</span></div>
+    <div id="circle"></div>
+    <audio id="fire">
+        <source src="./audio/shot.mp3" type="audio/mp3">
+    </audio>
 </body>
 </html>
