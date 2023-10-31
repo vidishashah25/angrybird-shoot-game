@@ -1,10 +1,10 @@
 class AngryBird{
 
-    constructor(){
+    constructor(id){
         this.width = 150;
         this.bottom = 0; 
+        this.id = id;
         this.aBirdElm = null;
-        
         this.left = Math.floor(Math.random() * (20 - 1) + 1);
         this.left1 = Math.floor(Math.random() * (40 - 20) + 20);
         this.left2 = Math.floor(Math.random() * (50 - 40) + 40);
@@ -16,6 +16,9 @@ class AngryBird{
         this.bottom3 = Math.floor(Math.random() * (100 - 1) + 1);
         this.bottom4 = Math.floor(Math.random() * (100 - 1) + 1);
         this.num = Math.floor(Math.random() * (10 - 1) + 1);
+        this.createElement();
+        this.createKeyFrame();
+        
         
     }
 
@@ -56,29 +59,28 @@ class AngryBird{
     this.aBirdElm.src = "../images/bird1.gif";
     const parentElm = document.getElementById('body');
     parentElm.appendChild(this.aBirdElm);
+    this.aBirdElm.setAttribute('id',this.id);
     this.aBirdElm.classList.add("angryBird");
     this.aBirdElm.style.width = this.width + "px";
     this.aBirdElm.style.position = 'absolute';
     this.aBirdElm.style.bottom = 0 + "px";
-
     this.aBirdElm.style.animationName = `bird${this.num}`;
-    this.aBirdElm.style.animationDuration = '12s';
-   
+    this.aBirdElm.style.animationDuration = '12s';  
+    
+
    }
+
 
    
 }
 
-let css = document.createElement('style');
-const ab = new AngryBird();
-ab.createKeyFrame();
-ab.createElement();
-const ab1 = new AngryBird();
-ab1.createKeyFrame();
-ab1.createElement();
-const ab2 = new AngryBird();
-ab2.createKeyFrame();
-ab2.createElement();
-const ab3 = new AngryBird();
-ab3.createKeyFrame();
-ab3.createElement();
+
+
+// const ab2 = new AngryBird();
+// ab2.createKeyFrame();
+// ab2.createElement();
+// const ab3 = new AngryBird();
+// ab3.createKeyFrame();
+// ab3.createElement();
+
+
