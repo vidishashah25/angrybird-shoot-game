@@ -7,16 +7,9 @@ body {
   background-position: bottom;
   background-size: 100%;
   overflow: hidden;
+  
 }
 
-#circle{
-    position:absolute;
-    transform:translate(-50%,-50%);
-    height:35px;
-    width:35px;
-    border-radius:50%;
-    border:2px solid rgb(32, 3, 15);
-  }
 
 img {
   width: 150px;
@@ -24,7 +17,8 @@ img {
   bottom: 0;
 }
 html{
-    cursor: crosshair;
+    cursor: url("../images/cross.png")40 40,crosshair;
+    
 }
 
 #score, #bullets,#lifeline {

@@ -2,14 +2,6 @@ let bullet = 5;
 let count = 0;
 let lifeLine = 1;
 
-let body = document.querySelector("body");
-document.addEventListener("mousemove", function (e) {
-  let circle = document.getElementById("circle");
-  let left = e.offsetX;
-  let top = e.offsetY;
-  circle.style.left = left + "px";
-  circle.style.top = top + "px";
-});
 
 function angryBirdShoot(bird) {
  if(bullet>=0)
@@ -48,10 +40,11 @@ function bombShoot(bird) {
 
 // document.body.addEventListener("click",()=>{})
 window.addEventListener("click",function(){
-    this.setTimeout(()=>{
-        this.document.getElementById("fire").play();
-    },200)
-    
+  
+      //  this.document.getElementById("fire").play();
+ 
+const fire =  new Audio("./audio/shot.mp3")
+fire.play()
     bullet--;
     document.getElementById("currentBullet").innerHTML = bullet;
     if(bullet<0)
