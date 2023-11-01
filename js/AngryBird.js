@@ -63,10 +63,10 @@ class AngryBird{
     this.aBirdElm.classList.add("angryBird");
     this.aBirdElm.style.width = this.width + "px";
     this.aBirdElm.style.position = 'absolute';
-    this.aBirdElm.style.bottom = 0 + "px";
+    this.aBirdElm.style.bottom = -2 + "px";
     this.aBirdElm.style.animationName = `bird${this.num}`;
-    this.aBirdElm.style.animationDuration = '12s';  
-    
+    this.aBirdElm.style.animationDuration = '10s';  
+    this.aBirdElm.style.animationFillMode= 'forwards';
 
    }
 
