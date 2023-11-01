@@ -56,7 +56,7 @@ class BombBird{
    createElement(){
     
     this.bBirdElm = document.createElement("img");
-    this.bBirdElm.src = "../images/bomb1.gif";
+    this.bBirdElm.src = "./images/bomb1.gif";
     const parentElm = document.getElementById('body');
     parentElm.appendChild(this.bBirdElm);
     this.bBirdElm.setAttribute('id',this.id);

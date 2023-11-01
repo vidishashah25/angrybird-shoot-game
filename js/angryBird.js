@@ -56,7 +56,7 @@ class AngryBird{
    createElement(){
     
     this.aBirdElm = document.createElement("img");
-    this.aBirdElm.src = "../images/bird1.gif";
+    this.aBirdElm.src = "./images/bird1.gif";
     const parentElm = document.getElementById('body');
     parentElm.appendChild(this.aBirdElm);
     this.aBirdElm.setAttribute('id',this.id);
@@ -74,13 +74,5 @@ class AngryBird{
    
 }
 
-
-
-// const ab2 = new AngryBird();
-// ab2.createKeyFrame();
-// ab2.createElement();
-// const ab3 = new AngryBird();
-// ab3.createKeyFrame();
-// ab3.createElement();
 
 
