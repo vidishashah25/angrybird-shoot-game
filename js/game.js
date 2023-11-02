@@ -32,7 +32,7 @@ class Game {
           newBombBird.bBirdElm.remove();
           if(this.lifeLine===0)
           {
-            //alert("Game Over")
+          
             location.href = "./gameOver.html"
           }
           document.getElementById("currentScore").innerHTML = --this.counter;
