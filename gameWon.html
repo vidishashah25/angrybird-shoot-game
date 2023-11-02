@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Game Won</title>
     <style>
         body{
-            background-image: url('./images/bg.jpg');
+            background: black;
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-position: bottom;
@@ -59,13 +59,14 @@
 </head>
 <body>
     <div class="container">
-        <img id = 'go' src="./images/game_over.gif" alt="">
-        <h1>Do you want to play again?</h1>
-        <img id="ab" src="./images/Red_EyeRoll.webp" alt="">
+        <img id = 'go' src="./images/fireworks.gif" alt="">
+        <h1>Congratulations...!!!</h1>
+        <h1>You won the game.</h1>
+        <img id="ab" src="./images/success.gif" alt="">
         <a class="button" href="./index.html"><span>Play Again</span></a>
     </div>
     
-    <audio src="./audio/game-over.mp3" id="my_audio" autoplay="autoplay"></audio>
+    <audio src="./audio/success.mp3" id="my_audio" autoplay="autoplay"></audio>
     
 </body>
 </html>

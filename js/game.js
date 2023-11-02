@@ -98,7 +98,7 @@ class Game {
       setTimeout(()=>{
         if(game.counter === 12)
         {
-          alert("Yupiee won the Game..")
+          location.href = "./gameWon.html"
         }
         if(game.counter<12){
           console.log('gameover')
@@ -107,7 +107,7 @@ class Game {
       },20000)
      
   
-      const fire =  new Audio("./audio/shot.mp3")
+      const fire =  new Audio("./audio/shoot.mp3")
       const death =  new Audio("./audio/death.mp3")
       const bonus =  new Audio("./audio/bonus.mp3")
   
