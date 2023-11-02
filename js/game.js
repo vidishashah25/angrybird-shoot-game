@@ -3,7 +3,6 @@ class Game {
     this.bullet = 14;
     this.lifeLine = 1;
     this.counter = 0;
-    this.start();
     this.audio = 0;
   }
 
@@ -70,7 +69,7 @@ class Game {
         } 
         else
         {
-          this.bullet = this.bullet + 2;
+          this.bullet = 14;
           document.getElementById("currentBullet").innerHTML = this.bullet;
           const b1 = setInterval(()=>{
             document.getElementById("bullets").style.fontSize = 70 + "px"
@@ -86,6 +85,49 @@ class Game {
         
       })
     },6000)
+
+    document.addEventListener("click",()=>{
+  
+      document.getElementById("currentBullet").innerHTML = --game.bullet;
+      if(game.bullet<0)
+      {
+        alert("No Bullets Available");
+      }
+      
+  
+      setTimeout(()=>{
+        if(game.counter === 12)
+        {
+          alert("Yupiee won the Game..")
+        }
+        if(game.counter<12){
+          console.log('gameover')
+          location.href = "./gameOver.html"
+        }
+      },20000)
+     
+  
+      const fire =  new Audio("./audio/shot.mp3")
+      const death =  new Audio("./audio/death.mp3")
+      const bonus =  new Audio("./audio/bonus.mp3")
+  
+      switch(game.audio)
+      {
+        case 1:
+          fire.play();
+          break;
+        case 2:
+          death.play();
+          break;
+        case 3:
+          bonus.play();
+          break;
+        default:
+          fire.play();
+          break;
+      }
+    
+  })
    
   
   }
@@ -95,46 +137,16 @@ class Game {
 let css = document.createElement("style");
 const game = new Game();
 
-document.addEventListener("click",()=>{
-  
-    document.getElementById("currentBullet").innerHTML = --game.bullet;
-    if(game.bullet<0)
-    {
-      alert("No Bullets Available");
-    }
-    
-
-    setTimeout(()=>{
-      if(game.counter === 12)
-      {
-        alert("Yupiee won the Game..")
-      }else{
-        location.href = "./gameOver.html"
-      }
-    },14000)
-   
-
-    const fire =  new Audio("./audio/shot.mp3")
-    const death =  new Audio("./audio/death.mp3")
-    const bonus =  new Audio("./audio/bonus.mp3")
-
-    switch(game.audio)
-    {
-      case 1:
-        fire.play();
-        break;
-      case 2:
-        death.play();
-        break;
-      case 3:
-        bonus.play();
-        break;
-      default:
-        fire.play();
-        break;
-    }
-  
+var splashScreen = document.querySelector('.splash');
+splashScreen.addEventListener('click',()=>{
+  splashScreen.style.opacity = 0;
+  setTimeout(()=>{
+    splashScreen.classList.add('hidden')
+    game.start()
+  },610)
 })
+
+
 
 
 
